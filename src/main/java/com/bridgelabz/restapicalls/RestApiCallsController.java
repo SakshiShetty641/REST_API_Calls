@@ -19,4 +19,9 @@ public class RestApiCallsController {
     public String getPathMessage(@PathVariable String name){
         return "Hello : " + name + " from bridgelabz ";
     }
+
+    @RequestMapping(value = "/test3", method = RequestMethod.POST)
+    public String getJsonMessage(@RequestBody Details data){
+        return data.details();
+    }
 }
